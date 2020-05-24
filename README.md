@@ -103,6 +103,6 @@ message_equality = message == decrypted_message
 Within the scope of this project 
 
 ## Acknowledgements
-I would like to thank to my instructor [Güneş Zeynep Karabulut Kurt](https://www.linkedin.com/in/gunes-karabulut-kurt-1715773/?originalSubdomain=ca) for providing me an opportunity to work on this project and giving us all support and guidance during the project. Also, many thanks to my project partner [Ahmet Doruk Başkan](https://www.linkedin.com/in/ahmet-doruk-ba%C5%9Fkan-73a439120/?originalSubdomain=tr) for huge contributions to constructing entire algorithm.
+I would like to thank to my instructor [Güneş Zeynep Karabulut Kurt](https://www.linkedin.com/in/gunes-karabulut-kurt-1715773/?originalSubdomain=ca) for providing me an opportunity to work on this project and giving us all support and guidance during the project. Also, many thanks to my project partner [Ahmet Doruk Başkan](https://www.linkedin.com/in/ahmet-doruk-ba%C5%9Fkan-73a439120/?originalSubdomain=tr) for huge contributions to construct the entire algorithm.
 
 ## Licence
