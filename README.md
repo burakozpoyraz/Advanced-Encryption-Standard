@@ -16,6 +16,7 @@ This is the implementation of well-known 128-bit Rijndael encryption algorithm c
 - [Example](https://github.com/burakozpoyraz/Advanced-Encryption-Standard/blob/master/README.md#example)
 - [AES in Wireless Communications](https://github.com/burakozpoyraz/Advanced-Encryption-Standard/blob/master/README.md#aes-in-wireless-communications)
 - [Acknowledgements](https://github.com/burakozpoyraz/Advanced-Encryption-Standard/blob/master/README.md#acknowledgements)
+- [Contributors](https://github.com/burakozpoyraz/Advanced-Encryption-Standard/blob/master/README.md#contributors)
 - [Licence](https://github.com/burakozpoyraz/Advanced-Encryption-Standard/blob/master/README.md#licence)
 
 ## Functions
@@ -140,6 +141,9 @@ where pe is the specified BER value. The simulation results indicate that averag
 
 ## Acknowledgements
 I would like to thank to my instructor [Güneş Zeynep Karabulut Kurt](https://www.linkedin.com/in/gunes-karabulut-kurt-1715773/?originalSubdomain=ca) for providing me an opportunity to work on this project and giving us all support and guidance during the project. Also, many thanks to my project partner [Ahmet Doruk Başkan](https://www.linkedin.com/in/ahmet-doruk-ba%C5%9Fkan-73a439120/?originalSubdomain=tr) for huge contributions to construct the entire algorithm.
+
+## Contributors
+- [Ahmet Doruk Başkan](https://github.com/baskanahm)
 
 ## Licence
 ![MIT Licence](https://img.shields.io/github/license/burakozpoyraz/Advanced-Encryption-Standard)
