@@ -1,4 +1,8 @@
 # Advanced Encryption Standard
+![Issues Badge](https://img.shields.io/github/issues/burakozpoyraz/Advanced-Encryption-Standard)
+![Forks Badge](https://img.shields.io/github/forks/burakozpoyraz/Advanced-Encryption-Standard)
+![Stars Badge](https://img.shields.io/github/stars/burakozpoyraz/Advanced-Encryption-Standard)
+
 This is the implementation of well-known 128-bit Rijndael encryption algorithm called Advanced Encryption Standard (AES) using Python programming language. In this project, there are three main outcomes as follows:
 
 - The entire algorithm of encrypting and decrypting a 4x4 hexadecimal matrix
@@ -32,6 +36,11 @@ Here are the main functions and their purpose that the algorithm includes:
 - **InvMixColumns:** Multiplication of a 4x4 matrix by Inverse MixColumns matrix.
 - **AES_Decrypt:** Decrypts an encrypted 4x4 matrix with the aid of the same key that is used for encryption.
 - **DecryptMessage:** Decrypts an encrypted message with the aid of the same key that is used for encryption.
+- **HexMatrixToBitArray:** Converts a 4x4 hexadecimal matrix to 128-length bit array.
+- **BitArrayToHexMatrix:** Converts a 128-length bit array to hexadecimal matrix.
+- **Channel:** Makes a bit array erroneous given a specific bit error rate (BER).
+- **TestChannel:** Tests if *Channel* matrix outcomes a bit array with given BER or not with a certain number of iterations. The more iterations, the closest BER to the given value.
+- **IsFrameErroneous:** Checks if a 4x4 matrix is exactly equal to another 4x4 matrix.
 
 ## Message Encryption
 This a method to encrypt a message via AES algorithm. Here is the encryption and decryption processes of this algorithm:
@@ -98,11 +107,39 @@ message = "This is Advanced Encryption Standard !!!"
 encrypted_message = EncryptMessage(message, cipher_key)
 decrypted_message = DecryptMessage(encrypted_message, cipher_key)
 message_equality = message == decrypted_message
+
+# Channel Simulation
+bit_array = HexMatrixToBitArray(state_matrix)
+BER = 0.2
+
+iter_num1 = 10
+calculated_BER1 = TestChannel(bit_array, BER, iter_num1)
+>>> 0.215625 [Finished in 0.4s]
+
+iter_num2 = 1000
+calculated_BER2 = TestChannel(bit_array, BER, iter_num2)
+>>> 0.201921 [Finished in 0.6s]
+
+iter_num3 = 10 ** 6
+calculated_BER3 = TestChannel(bit_array, BER, iter_num3)
+>>> 0.200015 [Finished in 219.6s]
 ```
 ## AES in Wireless Communications
-Within the scope of this project 
+Within the scope of this project, AES algorithm is analysed in a wireless communication. The main purpose is observing the effects of bit errors on the loss of frames. The steps of the simulation is given as follows:
+- 16-byte information is encrypted with AES algorithm.
+- The information is passed through a channel causing bit errors with a specified BER value.
+- Obtained erroneous information is decrypted.
+- Decrypted frame is checked if it matches with the frame that would be obtained when there was no bit errors.
+These steps construct one pass of the simulation and it is used 4000 frames and average frame error rate (FER) is observed. At last, the theoretical FER corresponding to a specific BER is calculated with the formula given as below:
+
+![FER_Formula](https://user-images.githubusercontent.com/18036489/82825153-5de75e00-9eb3-11ea-9aaa-c4a1f2996dd3.jpg)
+
+where pe is the specified BER value. The simulation results indicate that average FER values totally match with the theoretical ones:
+
+![BERvsFER](https://user-images.githubusercontent.com/18036489/82824931-eadde780-9eb2-11ea-9eb0-ec1f15795022.png)
 
 ## Acknowledgements
 I would like to thank to my instructor [Güneş Zeynep Karabulut Kurt](https://www.linkedin.com/in/gunes-karabulut-kurt-1715773/?originalSubdomain=ca) for providing me an opportunity to work on this project and giving us all support and guidance during the project. Also, many thanks to my project partner [Ahmet Doruk Başkan](https://www.linkedin.com/in/ahmet-doruk-ba%C5%9Fkan-73a439120/?originalSubdomain=tr) for huge contributions to construct the entire algorithm.
 
 ## Licence
+![MIT Licence](https://img.shields.io/github/license/burakozpoyraz/Advanced-Encryption-Standard)
