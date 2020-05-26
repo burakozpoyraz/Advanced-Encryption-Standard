@@ -43,7 +43,7 @@ Here are the main functions and their purpose that the algorithm includes:
 - **IsFrameErroneous:** Checks if a 4x4 matrix is exactly equal to another 4x4 matrix.
 
 ## Message Encryption
-This a method to encrypt a message via AES algorithm. Here is the encryption and decryption processes of this algorithm:
+This is a method to encrypt a message via AES algorithm. Here is the encryption and decryption processes of this algorithm:
 
 ### Encryption
 The ASCII code of each character in a string message is appended to a buffer array. The elements of the buffer array are then placed into 4x4 matrices under the condition that the order of the elements representing each character does not change. If there are some empty indices in the last matrix, these indices are full-filled with zeros which is called zero-padding. Those matrices are encrypted via AES algorithm. Here is how it works:
